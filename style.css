@@ -1,0 +1,100 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calculadora {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px #63626294;
+  width: 300px;
+}
+
+#display {
+  width: 90%;
+  font-size: 24px;
+  padding: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+  text-align: right;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.botoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0077b6;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #023e8a;
+}
+
+button.zero {
+  grid-column: span 2;
+}
+/* Botão de troca de tema */
+#toggle-tema {
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#toggle-tema:hover {
+  background-color: #222;
+}
+
+/* Tema escuro */
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark .calculadora {
+  background-color: #1e1e1e;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+body.dark #display {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+  border-color: #444;
+}
+
+body.dark button {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+body.dark button:hover {
+  background-color: #555;
+}
+
+body.dark #toggle-tema {
+  background-color: #888;
+  color: black;
+}
